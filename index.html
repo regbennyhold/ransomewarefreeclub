@@ -146,8 +146,7 @@ It detects for more than 250 types of ransomware.
 					
 					
 					jQuery("ul.list").hide();
-					
-					jQuery(".search").on("change", function(){
+var doshow = function(){
 						
 						if (jQuery(this).val() == ""){
 							
@@ -158,9 +157,12 @@ It detects for more than 250 types of ransomware.
 							jQuery("ul.list").show();
 							
 						}
+};
 					
-					});
 					
+					jQuery(".search").on("change", doshow());
+
+	jQuery(".search").on("blur", doshow());				
 					tool_list.add([
 					
 					
